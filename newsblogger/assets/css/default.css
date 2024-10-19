@@ -141,3 +141,6 @@ body.newsblogger .footer-sidebar .widget .widget-title:after { background: #369e
 .newsblogger .spnc-author-box  .spnc-author-posts-link{
     color: #369ef6;
 }
+.newsblogger .sticky-post-icon, .newsblogger .spnc-post.format-quote .spnc-quote-wrap, .newsblogger .spnc-post .spnc-post-btn {
+    background-color: #369ef6;
+}

@@ -69,5 +69,8 @@ function newsblogger_custom_color_css() {
 		.newsblogger .spnc-author-box  .spnc-author-posts-link{
 		    color:  <?php echo esc_attr($link_color); ?>;
 		}
+		.newsblogger .sticky-post-icon, .newsblogger .spnc-post.format-quote .spnc-quote-wrap, .newsblogger .spnc-post .spnc-post-btn {
+		    background-color: <?php echo esc_attr($link_color); ?>;
+		}
 	</style>
 <?php }

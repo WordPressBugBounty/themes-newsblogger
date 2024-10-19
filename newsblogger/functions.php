@@ -179,7 +179,8 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo 'Added Advertisement Feature.'; ?></li>
+                            <li><?php echo 'Added Post Formats.'; ?></li>
+                            <li><?php echo 'Added categories in Blog Grid Layout & Blog Template.'; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
