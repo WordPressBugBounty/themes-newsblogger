@@ -170,7 +170,9 @@ if(!class_exists('Newscrunch_Plus')){
           ?>
             <div class="newscrunch-update-notice notice notice-info is-dismissible">
                 <div class="notice-content-wrap">
-                    
+                    <div class="admin-update-img">
+                        <img src="<?php echo esc_url(get_theme_file_uri().'/admin/assets/img/ad-pop-up.png');?>" alt="<?php esc_attr_e('Notice Image','newscrunch'); ?>"/>
+                    </div>
                     <div class="notice-content">
                         <h2><?php printf( esc_html__('%1$s Current %2$s', 'newsblogger'), esc_html($theme->name), '<span>Version' . ' ' . esc_html($theme->get('Version')) . '</span>'); ?></h2>
                         
@@ -179,8 +181,8 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo 'Added Post Formats.'; ?></li>
-                            <li><?php echo 'Added categories in Blog Grid Layout & Blog Template.'; ?></li>
+                            <li><?php echo 'Added Popup Advertisement Feature in Pro.'; ?></li>
+                            <li><?php echo 'Fixed Youtube Playlist Title , Random Post Archive Advertisement & Some Other Issues.'; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">

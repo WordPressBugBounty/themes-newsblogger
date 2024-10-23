@@ -6,7 +6,7 @@ Author URI: https://spicethemes.com
 Description: NewsBlogger is a dynamic and versatile child theme for the popular NewCrunch WordPress theme. Perfect for bloggers, journalists, and online magazines, it offers enhanced customization options, improved performance, and seamless integration with both the Gutenberg and Classic editors. Compatible to various popular plugins such as Elementor, Contact Form 7, Polylang and WPML. Theme is RTL ready and prioritizes user privacy and complies with the General Data Protection Regulation (GDPR) guidelines by refraining from collecting any personal data restricted under GDPR. The theme is also schema-ready, enhancing search engine visibility and optimization. To explore the theme further, feel free to check out our demo at: https://demo-news.spicethemes.com/startersite-1/. For video tutorial visit here https://www.youtube.com/playlist?list=PLTfjrb24Pq_DeJOZdKEaP3rZPbHuOCLtZ
 Template: newscrunch
 Tags: blog, news, photography, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, rtl-language-support, one-column, two-columns, full-width-template, sticky-post, right-sidebar, footer-widgets, grid-layout
-Version: 0.1.6
+Version: 0.1.7
 Requires at least: 4.5
 Tested up to: 6.6
 Requires PHP: 5.6
@@ -392,3 +392,4 @@ body.home.newscrunch.newsblogger .header-sidebar { position: unset; }
 body.newsblogger .spnc-single-post .spnc-blog-wrapper .spnc-post .spnc-entry-meta .spnc-cat-links a, body.newsblogger .spnc-single-post .spnc-blog-wrapper .spnc-post .spnc-entry-meta .spnc-cat-links a:is(:hover, :focus){
 	color: #fff;
 }
+body #page .spnc-footer-ribbon-2.site-footer {margin-top: 25px;}
