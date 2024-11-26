@@ -25,7 +25,14 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  * Load all core theme function files
 */
 require NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/inc/theme-color/custom-color.php';
-require NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/inc/customizer/custom-controls/customizer-image-radio/customizer-image-radio.php';
+function newsblogger_load_customizer_image_radio_control() {
+    // Check if the class doesn't already exist
+    if ( ! class_exists( 'NewsBlogger_Img_Radio_Control' ) ) {
+        require_once get_template_directory() . '/inc/customizer/custom-controls/customizer-image-radio/customizer-image-radio.php';
+    }
+}
+// Hook this function to `after_setup_theme` to ensure it loads at the correct time
+add_action( 'after_setup_theme', 'newsblogger_load_customizer_image_radio_control' );
 
 /* Enqueue Style & Scipts */
 add_action('wp_enqueue_scripts', 'newsblogger_enqueue_styles');
@@ -46,7 +53,9 @@ function newsblogger_enqueue_styles() {
 
     // enqueue scripts
     if ( ! function_exists( 'spncp_activate' ) ):
-        wp_enqueue_script('newsblogger-custom', NEWSBLOGGER_TEMPLATE_DIR_URI . '/assets/js/custom.js', array('jquery'), '',true);
+        if(get_theme_mod('hide_show_missed_section',true) == true){
+            wp_enqueue_script('newsblogger-custom', NEWSBLOGGER_TEMPLATE_DIR_URI . '/assets/js/missed-custom.js', array('jquery'), '',true);
+        }
     endif;
 }
 
@@ -56,8 +65,17 @@ function newsblogger_agency_setup() {
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
-    // Let WordPress manage the document title.
+    // Add theme supports.
     add_theme_support( 'title-tag' );
+    add_theme_support( "align-wide" );
+    add_editor_style();
+    add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'register_block_style' );
+    add_theme_support( 'register_block_pattern' );
+    /*
+    * Enable support for Post Thumbnails on posts and pages.
+    */add_theme_support( 'post-thumbnails' );
     // Add theme support for HTML5.
     add_theme_support( 'html5', array(
         'search-form',
@@ -178,7 +196,8 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo 'Fixed some minor issues.'; ?></li>
+                            <li><?php echo 'Added image link in banner section.'; ?></li>
+                            <li><?php echo 'Fixed blog section image link issues with animation, missed section script issue & theme check plugin issues.'; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
@@ -442,7 +461,6 @@ function newsblogger_install_and_activate_plugin() {
     $plugin_main_file = $plugin_slug . '/' . $plugin_slug . '.php'; // Ensure this matches your plugin structure
 
     // Download the plugin file
-    WP_Filesystem();
     $temp_file = download_url($plugin_url);
 
     if (is_wp_error($temp_file)) {

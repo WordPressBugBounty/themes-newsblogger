@@ -6,9 +6,9 @@ Author URI: https://spicethemes.com
 Description: NewsBlogger is a dynamic and versatile child theme for the popular NewCrunch WordPress theme. Perfect for bloggers, journalists, and online magazines, it offers enhanced customization options, improved performance, and seamless integration with both the Gutenberg and Classic editors. Compatible to various popular plugins such as Elementor, Contact Form 7, Polylang and WPML. Theme is RTL ready and prioritizes user privacy and complies with the General Data Protection Regulation (GDPR) guidelines by refraining from collecting any personal data restricted under GDPR. The theme is also schema-ready, enhancing search engine visibility and optimization. To explore the theme further, feel free to check out our demo at: https://demo-news.spicethemes.com/startersite-1/. For video tutorial visit here https://www.youtube.com/playlist?list=PLTfjrb24Pq_DeJOZdKEaP3rZPbHuOCLtZ
 Template: newscrunch
 Tags: blog, news, photography, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, rtl-language-support, one-column, two-columns, full-width-template, sticky-post, right-sidebar, footer-widgets, grid-layout
-Version: 0.1.7.1
+Version: 0.1.7.2
 Requires at least: 4.5
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -201,7 +201,6 @@ body.home.newscrunch.newsblogger .header-sidebar { position: unset; }
 .newsblogger .spnc-bnr-1 h3.spnc-entry-title a { font-family: "Jost", sans-serif; }
 .newsblogger .spnc-bnr-1 .spnc-post-content { padding-left: 10px; padding-right: 10px; }
 .newsblogger .spnc-bnr-1 .spnc-entry-meta { margin-bottom: 0.688rem; }
-.newsblogger .spnc-bnr-1 .spnc_column-1 .spnc-post-wrapper { padding: 45px 0 20px; }
 .newsblogger .spnc-bnr-1 .spnc-post .spnc-post-content .spnc-info-link { font-family: "Jost", sans-serif; font-weight: 600; padding: 10px 20px; }
 @media (min-width: 550px) and (max-width: 1023px) {
     .spnc-bnr-1 .spnc_column_container { padding: 0 10px; }
@@ -393,3 +392,20 @@ body.newsblogger .spnc-single-post .spnc-blog-wrapper .spnc-post .spnc-entry-met
 	color: #fff;
 }
 body #page .spnc-footer-ribbon-2.site-footer {margin-top: 25px;}
+
+/*===================================================================================*/
+/*  Others
+/*===================================================================================*/
+.aligncenter {clear: both;display: block;margin-right: auto;margin-left: auto;}
+.alignleft {display: inline;float: right;margin-left: 1.25rem;}
+img.alignright,.wp-caption.alignright {margin-right: 1.875rem;float: left;}
+.wp-caption .wp-caption-text,.gallery-caption,.entry-caption {clear: right;font-style: italic;line-height: 1.5em;margin: 0.75em 0;text-align: center;}
+.bypostauthor {}
+.gallery-caption {
+  display: block;
+  font-size: 0.71111em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Poppins","Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.5rem;
+}

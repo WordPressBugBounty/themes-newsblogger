@@ -207,7 +207,7 @@ if (!class_exists('NewsBlogger_About_Page')) {
 		 * 
 		 */
 		public function getting_started() {
-			require_once( NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/admin/tab-pages/getting-started.php' );
+			get_template_part( 'admin/tab-pages/getting-started' );
 		}
 
 		/**
@@ -215,7 +215,12 @@ if (!class_exists('NewsBlogger_About_Page')) {
 		 * 
 		 */
 		public function recommended_actions() {
-			require_once( NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/admin/tab-pages/recommended_actions.php' );
+			$newsblogger_actions = $this->recommended_actions;
+			$newsblogger_actions_todo = get_option( 'recommended_actions', false );
+			// Pass $newsblogger_actions to the template part
+		    set_query_var( 'newsblogger_actions', $newsblogger_actions );
+		    set_query_var( 'newsblogger_actions_todo', $newsblogger_actions_todo );
+			get_template_part( 'admin/tab-pages/recommended_actions' );
 		}
 
 
@@ -224,7 +229,7 @@ if (!class_exists('NewsBlogger_About_Page')) {
 		 * 
 		 */
 		public function video_tutorials() {
-			require_once( NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/admin/tab-pages/video-tutorials.php' );
+			get_template_part( 'admin/tab-pages/video-tutorials' );
 		}
 
 		/**
@@ -232,7 +237,7 @@ if (!class_exists('NewsBlogger_About_Page')) {
 		 * 
 		 */
 		public function unlock_premium_feature() {
-			require_once( NEWSBLOGGER_CHILD_TEMPLATE_DIR . '/admin/tab-pages/unlock-premium-feature.php' );
+			get_template_part( 'admin/tab-pages/unlock-premium-feature' );
 		}
 	
 	
@@ -336,9 +341,9 @@ if (!class_exists('NewsBlogger_About_Page')) {
 					esc_attr($slug),
 					esc_url($plugin_install_url),
 					/* translators: %s: theme name */
-					sprintf(esc_html__('Install %s now', 'newsblogger' ), esc_html($name)),
+					sprintf(esc_html__('Install','newsblogger') . ' %s ' . esc_html__('now','newsblogger'), esc_html($name)),
 					esc_html($name),
-					esc_html__('Import Demo', 'newsblogger' )
+					esc_html__('Install and activate', 'newsblogger' )
 				);
 			} 
 			elseif ($is_installed && !$is_activeted) {

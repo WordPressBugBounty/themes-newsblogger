@@ -1,6 +1,6 @@
 <?php 
-	$newsblogger_actions = $this->recommended_actions;
-	$newsblogger_actions_todo = get_option( 'recommended_actions', false );
+	$newsblogger_actions = get_query_var( 'newsblogger_actions', [] );
+    $newsblogger_actions_todo = get_query_var( 'newsblogger_actions_todo', [] );
 ?>
 <div id="recommended_actions" class="newsblogger-tab-pane panel-close">
 	<div class="action-list">
