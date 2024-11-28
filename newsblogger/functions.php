@@ -109,9 +109,11 @@ function newsblogger_body_class( $classes ) {
     return $classes;
 }
 
+$newsblogger_theme = wp_get_theme();  
+
 // Notice to add required plugin
 if(!class_exists('Newscrunch_Plus')){
-    if('NewsBlogger' == wp_get_theme()) :
+    if('NewsBlogger' == $newsblogger_theme->name) :
         function newsblogger_admin_plugin_notice_warn() {
             $theme_name=wp_get_theme();
             if ( get_option( 'dismissed-newsblogger_comanion_plugin', false ) ) {
@@ -196,8 +198,7 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo 'Added image link in banner section.'; ?></li>
-                            <li><?php echo 'Fixed blog section image link issues with animation, missed section script issue & theme check plugin issues.'; ?></li>
+                            <li><?php echo 'Fixed WordPress 6.7 related issues.'; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
@@ -367,7 +368,7 @@ function newsblogger_theme_header_panel_customizer( $wp_customize ) {
 add_action( 'customize_register', 'newsblogger_theme_header_panel_customizer', 11 );
 
 // Freemius snippet code
-if('NewsBlogger' == wp_get_theme()) {
+if('NewsBlogger' == $newsblogger_theme->name) {
     if ( ! function_exists( 'newb_fs' ) ) {
         if(class_exists('Spice_Starter_Sites') && defined( 'SPICE_STARTER_SITES_PLUGIN_PATH' ) && file_exists(SPICE_STARTER_SITES_PLUGIN_PATH . '/freemius/start.php')) {
             // Create a helper function for easy SDK access.
