@@ -3,7 +3,7 @@
 Contributors: spicethemes
 Requires at least: 4.5
 Tested up to: 6.7
-Stable tag: 0.1.7.3
+Stable tag: 0.1.7.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,6 +33,10 @@ NewsBlogger WordPress Theme is a child theme of Newscrunch Theme, Copyright (C) 
 NewsBlogger WordPress Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+@Version 0.1.7.4
+* Fixed the issue related to the demo import plugin.
+* Added an option to demo import on the customizer page. 
 
 @Version 0.1.7.3
 * Fixed WordPress 6.7 related issues.
