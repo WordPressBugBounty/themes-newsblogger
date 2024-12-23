@@ -198,8 +198,8 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo 'Fixed the issue related to the demo import plugin.'; ?></li>
-                            <li><?php echo 'Added an option to demo import on the customizer page.'; ?></li>
+                            <li><?php echo 'Added Category description.'; ?></li>
+                            <li><?php echo 'Added blog/archive overlay layout in pro.'; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
@@ -412,10 +412,6 @@ if('NewsBlogger' == $newsblogger_theme->name) {
 add_action('wp_ajax_newsblogger_check_plugin_status', 'newsblogger_check_plugin_status',11);
 
 function newsblogger_check_plugin_status() {
-    if (!current_user_can('install_plugins')) {
-        wp_send_json_error('You do not have permission to manage plugins.');
-        return;
-    }
 
     if (!isset($_POST['plugin_slug'])) {
         wp_send_json_error('No plugin slug provided.');
@@ -442,10 +438,6 @@ function newsblogger_check_plugin_status() {
 add_action('wp_ajax_newsblogger_install_activate_plugin', 'newsblogger_install_and_activate_plugin',11);
 
 function newsblogger_install_and_activate_plugin() {
-    if (!current_user_can('install_plugins')) {
-        wp_send_json_error('You do not have permission to install plugins.');
-        return;
-    }
 
     if (!isset($_POST['plugin_url'])) {
         wp_send_json_error('No plugin URL provided.');
