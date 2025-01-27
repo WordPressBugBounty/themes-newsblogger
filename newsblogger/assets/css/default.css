@@ -86,7 +86,7 @@ body.newscrunch.newsblogger .owl-carousel .owl-nav .owl-next:is(:hover, :focus) 
 /*===================================================================================*/
 /*  Sidebar & Footer Widgets
 /*===================================================================================*/
-.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .wp-block-search .wp-block-search__label, .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .widget.widget_block :is(h1,h2,h3,h4,h5,h6), .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-page-section-space .widget .wp-block-heading, .newsblogger form.search-form input.search-submit, .newsblogger button[type="submit"] { background-color: #369ef6; }
+.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .wp-block-search .wp-block-search__label, .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .widget.widget_block :is(h1,h2,h3,h4,h5,h6), .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-page-section-space .widget .wp-block-heading, .newsblogger form.search-form input.search-submit, .newsblogger button[type="submit"]:not(.woocommerce-Button.button) { background-color: #369ef6; }
 .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .widget.widget_block :is(h1,h2,h3,h4,h5,h6)::after, .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-page-section-space .widget .wp-block-heading::after, .newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .wp-block-search .wp-block-search__label::after { border-bottom: 1px solid #369ef6; }
 .newsblogger input[type="search"]:is(:hover, :focus) { border: 1px solid #369ef6; }
 .newsblogger .widget .wp-block-latest-posts li a:is(:hover, :focus), .newsblogger .widget .wp-block-archives li a:is(:hover, :focus), .newsblogger .widget .wp-block-categories li a:is(:hover, :focus), .newsblogger .widget .wp-block-page-list li a:is(:hover, :focus), .newsblogger .widget .wp-block-rss li a:is(:hover, :focus), .newsblogger .widget_meta ul li a:is(:hover, :focus), .newsblogger .widget .wp-block-latest-comments li a:is(:hover, :focus), .newsblogger .spnc-sidebar .widget:has(ol, ul) li::before, .newsblogger .widget:has(.wp-block-latest-posts, .wp-block-archives, .wp-block-categories, .wp-block-page-list, .wp-block-rss, .widget_meta, .wp-block-latest-comments, .widget_nav_menu ) li::before, .newsblogger .wp-block-latest-comments li article footer::before { color: #369ef6; }
@@ -143,4 +143,73 @@ body.newsblogger .footer-sidebar .widget .widget-title:after { background: #369e
 }
 .newsblogger .sticky-post-icon, .newsblogger .spnc-post.format-quote .spnc-quote-wrap, .newsblogger .spnc-post .spnc-post-btn {
     background-color: #369ef6;
+}
+
+
+/* Woocommerce CSS */
+.newsblogger.woocommerce.woocommerce-page span.onsale,
+.woocommerce-page .onsale,
+body.woocommerce.newsblogger .spnc-post .spnc-entry-content ul.products li.product a.add_to_cart_button,
+.newsblogger.woocommerce ul.products li.product .button,
+.newsblogger.woocommerce ul.products li.product .added_to_cart,
+.newsblogger.woocommerce nav.woocommerce-pagination ul li a:focus,
+.newsblogger.woocommerce nav.woocommerce-pagination ul li a:hover,
+.newsblogger.woocommerce nav.woocommerce-pagination ul li span.current,
+.newsblogger.woocommerce.woocommerce-page span.onsale,
+.newsblogger.woocommerce-page .onsale,
+.newsblogger.woocommerce-cart .cart-collaterals .add_to_cart_button,
+.newsblogger.woocommerce-cart .cart-collaterals .cart_totals .checkout-button,
+.newsblogger.woocommerce-checkout .wc-block-components-title.wc-block-components-title,
+.newsblogger.woocommerce-checkout .wc-block-components-order-summary__button-text,
+.newsblogger.woocommerce-checkout .wc-block-components-order-summary .wc-block-components-panel__button,
+.newsblogger.woocommerce-checkout .wc-block-components-checkout-place-order-button,
+.newsblogger.woocommerce.single-product div.product form.cart .button,
+.newsblogger.woocommerce #review_form #respond .form-submit input,
+.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .widget.woocommerce :is(h1, h2, h3, h4, h5, h6) {background-color: #369ef6;}
+.newsblogger .woocommerce-loop-product__title:hover,
+body.woocommerce.newsblogger ul.products li.product .price ins .woocommerce-Price-amount.amount,
+.newsblogger.woocommerce-cart.woocommerce-page ins.sale-price .woocommerce-Price-amount.amount,
+.newsblogger.woocommerce-cart .product-subtotal .woocommerce-Price-amount.amount,
+body.newsblogger .wc-block-components-totals-footer-item-tax-value .newsblogger.woocommerce-cart .cart_totals .order-total .woocommerce-Price-amount.amount,
+.newsblogger.woocommerce.single-product div.product p.price ins .woocommerce-Price-amount.amount,
+.newsblogger.woocommerce.single-product div.product span.price ins,
+.newsblogger.woocommerce.single-product .product_meta .posted_in a,
+.newsblogger .spnc-mini-cart-summary .spnc-cart-subtotal .woocommerce-Price-amount {color: #369ef6;}
+.newsblogger.woocommerce.single-product div.product .woocommerce-tabs ul.tabs li.active {background: #369ef6;}
+.newsblogger.woocommerce.single-product div.product .woocommerce-tabs ul.tabs::before {border-bottom: 1px solid #369ef6;}
+.newsblogger .widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:is(:hover, :focus) {color: #ffffff;background-color: #369ef6;}
+.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-sidebar .widget.woocommerce :is(h1, h2, h3, h4, h5, h6)::after {border-bottom: 1px solid #369ef6;}
+.newsblogger .widget.widget_block .wc-block-price-filter .wc-block-components-filter-reset-button:is(:hover, :focus),
+.newsblogger .widget.widget_block .wp-block-woocommerce-attribute-filter .wc-block-components-filter-reset-button:is(:hover, :focus),
+.newsblogger .widget.widget_block .wp-block-woocommerce-stock-filter .wc-block-components-filter-reset-button:is(:hover, :focus),
+.newsblogger .widget.widget_block .wc-block-active-filters .wc-block-active-filters__clear-all:is(:hover, :focus),
+.newsblogger .widget.widget_block .wp-block-woocommerce-rating-filter .wc-block-components-filter-reset-button:is(:hover, :focus) {color: #ffffff;background-color: #369ef6;}
+.newsblogger.woocommerce-cart .spnc-entry-content .shop_table tr:first-child:not(.cart_item) {border-bottom: 1px solid #369ef6;}
+.newsblogger.woocommerce-account .woocommerce-error,
+.newsblogger.woocommerce-page .woocommerce-message,
+.newsblogger.woocommerce-cart .woocommerce-info {border-top-color: #369ef6;}
+.newsblogger.woocommerce-account .woocommerce-error::before,
+.newsblogger.woocommerce-cart .woocommerce-error::before,
+.newsblogger.woocommerce-cart .woocommerce-info::before,
+.newsblogger.woocommerce-cart .woocommerce-message::before {color: #369ef6;}
+.newsblogger.woocommerce-cart .return-to-shop-button {background-color: #369ef6;color: #fff;}
+.newsblogger .spnc-navbar .header-cart .cart-count {background: #369ef6;}
+.newsblogger .woocommerce-info {border-top-color: #369ef6;}
+.woocommerce.newsblogger p.stars a {color: #369ef6;}
+.woocommerce.newsblogger .star-rating::before, .woocommerce.newsblogger .star-rating span::before {color: #369ef6;}
+body.newsblogger .wc-block-components-totals-footer-item-tax-value{color: #369ef6;}
+body.newsblogger .woocommerce-store-notice, p.demo_store {background-color: #369ef6;}
+[data-theme="spnc_dark"] .newsblogger .woocommerce-loop-product__title:hover {color: #369ef6;}
+[data-theme="spnc_dark"] .newsblogger.woocommerce .star-rating::before {color: #369ef6;}
+[data-theme="spnc_dark"] .newsblogger.woocommerce .star-rating span::before {color: #369ef6;}
+[data-theme="spnc_dark"] .newsblogger.woocommerce.single-product .product_meta .posted_in a {color: #369ef6;}
+body.newsblogger .spnc-sidebar .wp-block-woocommerce-featured-category .wp-block-button__link,
+body.newsblogger .spnc-sidebar .wp-block-woocommerce-featured-product .wp-block-button__link {background-color: #369ef6;}
+body.newsblogger .product-category .woocommerce-loop-category__title:hover {color: #369ef6;}
+body.newsblogger .wc-block-components-review-list-item__rating>.wc-block-components-review-list-item__rating__stars span:before {color: #369ef6;}
+body.newsblogger button.woocommerce-Button.button:hover{ background-color: #369ef6;}
+body.newsblogger.woocommerce-checkout .wc-block-checkout__contact-fields .wc-block-components-checkout-step__heading, body.newsblogger.woocommerce-checkout .wc-block-components-checkout-step__heading, body.newsblogger.woocommerce-checkout .wc-block-components-order-summary .wc-block-components-panel__button{border-bottom: 1px solid #369ef6;}
+body.newsblogger.woocommerce-page a.button.wc-forward:hover{background-color: #369ef6;}
+body.newsblogger.woocommerce-page .woocommerce-message::before {
+    color: #369ef6;
 }

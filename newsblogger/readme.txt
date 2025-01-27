@@ -3,7 +3,7 @@
 Contributors: spicethemes
 Requires at least: 4.5
 Tested up to: 6.7
-Stable tag: 0.1.7.5
+Stable tag: 0.2
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,13 +26,16 @@ Keyboard navigation is working properly in the forward direction by using the ta
 
 == Copyright ==
 
-Newscrunch WordPress Theme, Copyright (C) 2023-2024, spicethemes
+Newscrunch WordPress Theme, Copyright (C) 2023-2025, spicethemes
 Newscrunch WordPress Theme is distributed under the terms of the GNU GPL
 
-NewsBlogger WordPress Theme is a child theme of Newscrunch Theme, Copyright (C) 2024, SpiceThemes
+NewsBlogger WordPress Theme is a child theme of Newscrunch Theme, Copyright (C) 2025, SpiceThemes
 NewsBlogger WordPress Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+@Version 0.2
+* Added WooCommerce compatibility related feature.
 
 @Version 0.1.7.5
 * Added Category description.
@@ -121,4 +124,4 @@ https://pxhere.com/en/photo/620084
 https://pxhere.com/en/photo/1049884#google_vignette
 
 * Images on /assets/images folder
-Copyright (C) 2024, spicethemes and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright (C) 2025, spicethemes and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)

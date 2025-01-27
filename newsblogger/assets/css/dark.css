@@ -63,3 +63,24 @@
     }
 }
 [data-theme="spnc_dark"] .newsblogger .breadcrumb.trail-items li { color: #fff; }
+
+
+/* Wocommerce css */
+[data-theme="spnc_dark"] .widget_shopping_cart .widget_shopping_cart_content .spnc-mini-cart-summary,
+[data-theme="spnc_dark"] .newsblogger :is(.widget_recently_viewed_products, .widget_top_rated_products, .widget_products) .product_list_widget li,
+[data-theme="spnc_dark"] .newsblogger .wp-block-woocommerce-product-categories .wc-block-product-categories-list li,
+[data-theme="spnc_dark"] .newsblogger .wp-block-woocommerce-product-categories .wc-block-product-categories-list li>ul {border-color: #3b3b3b;}
+[data-theme="spnc_dark"] .widget_shopping_cart .widget_shopping_cart_content .spnc-mini-cart-summary .spnc-cart-item-quantity,
+[data-theme="spnc_dark"] .widget_shopping_cart .widget_shopping_cart_content .spnc-mini-cart-summary .spnc-cart-subtotal {color: #fff;}
+[data-theme="spnc_dark"] .newsblogger.woocommerce-page.woocommerce-cart #content .actions #coupon_code {border-color: #3b3b3b;}
+[data-theme="spnc_dark"] .newsblogger.woocommerce form.checkout_coupon,
+[data-theme="spnc_dark"] .newsblogger.woocommerce form.login,
+[data-theme="spnc_dark"] .newsblogger.woocommerce form.register,
+[data-theme="spnc_dark"] #add_payment_method .cart-collaterals .cart_totals tr td,
+[data-theme="spnc_dark"] #add_payment_method .cart-collaterals .cart_totals tr th,
+[data-theme="spnc_dark"] .woocommerce-cart .cart-collaterals .cart_totals tr td,
+[data-theme="spnc_dark"] .woocommerce-cart .cart-collaterals .cart_totals tr th,
+[data-theme="spnc_dark"] .woocommerce-checkout .cart-collaterals .cart_totals tr td,
+[data-theme="spnc_dark"] .woocommerce-checkout .cart-collaterals .cart_totals tr th {border-color: #3b3b3b;}
+[data-theme="spnc_dark"] .newsblogger .woocommerce-store-notice, p.demo_store {color: #fff;}
+[data-theme="spnc_dark"]  .rtl .spnc-sidebar .wc-block-components-price-slider__range-input-progress {--range-color: #f7f7f7;}
