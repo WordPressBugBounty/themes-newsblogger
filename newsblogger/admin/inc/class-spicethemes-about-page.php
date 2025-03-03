@@ -419,6 +419,11 @@ if (!class_exists('NewsBlogger_About_Page')) {
 			{
 				return true;
 			}
+			if( class_exists('Spice_Blocks') && ($name=='Spice Blocks'))
+			{
+				return true;
+			}
+			
 
 		}
 
@@ -558,6 +563,11 @@ function newsblogger_recommended_plugins_array($plugins){
 			'slug'     => 'woocommerce',
 			'desc'     => esc_html__('We highly recommend installing and activating the WooCommerce plugin, which allows you to create a shop and enhance your business.', 'newsblogger'),
 	    );
+	    $plugins[] = array(
+			'name'     	=> 'Spice Blocks',
+			'slug'     	=> 'spice-blocks',
+			'desc'     	=> esc_html__('It is recommended that you install & activate the Spice Blocks plugin to import the gutenberg starter sites', 'newsblogger' ),
+		);
 
 	return $plugins;
 }
