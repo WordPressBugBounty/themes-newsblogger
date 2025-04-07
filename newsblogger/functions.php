@@ -227,7 +227,8 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo "Fixed Container width issue with sticky sidebar."; ?></li>
+                            <li><?php echo "Added WooCommerce block CSS."; ?></li>
+                            <li><?php echo "Fixed some style issues."; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
@@ -462,9 +463,15 @@ if('NewsBlogger' == $newsblogger_theme->name) {
 add_action('wp_ajax_newsblogger_check_plugin_status', 'newsblogger_check_plugin_status',11);
 
 function newsblogger_check_plugin_status() {
+    
+    // Check if user is authorized (must be an admin)
+    if (!current_user_can('install_plugins')) {
+        wp_send_json_error(esc_html__('You do not have permission to manage plugins.', 'newsblogger'));
+        return;
+    }
 
     if (!isset($_POST['plugin_slug'])) {
-        wp_send_json_error('No plugin slug provided.');
+       wp_send_json_error(esc_html__('No plugin slug provided.', 'newsblogger'));
         return;
     }
 
@@ -488,9 +495,15 @@ function newsblogger_check_plugin_status() {
 add_action('wp_ajax_newsblogger_install_activate_plugin', 'newsblogger_install_and_activate_plugin',11);
 
 function newsblogger_install_and_activate_plugin() {
+    
+    // Check if user is authorized (must be an admin)
+    if (!current_user_can('install_plugins')) {
+        wp_send_json_error(esc_html__('You do not have permission to install plugins.', 'newsblogger'));
+        return;
+    }
 
     if (!isset($_POST['plugin_url'])) {
-        wp_send_json_error('No plugin URL provided.');
+         wp_send_json_error(esc_html__('No plugin URL provided.', 'newsblogger'));
         return;
     }
 
