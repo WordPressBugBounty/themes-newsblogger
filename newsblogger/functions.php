@@ -227,7 +227,7 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo "Added Page title settings on single page."; ?></li>
+                            <li><?php echo "Fixed some minor issues."; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
