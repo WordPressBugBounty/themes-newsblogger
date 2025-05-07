@@ -222,3 +222,6 @@ body.newsblogger.woocommerce-page .woocommerce-message::before {
     background-color: #369ef6;
     color: #fff;
 }
+.newsblogger .search-panel input[type="search"] {
+    border: 1px solid #369ef6;
+}

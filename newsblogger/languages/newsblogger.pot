@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewsBlogger 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newsblogger-wordpress-theme\n"
-"POT-Creation-Date: 2025-04-29 18:04+0530\n"
+"POT-Creation-Date: 2025-02-11 18:41+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,36 +83,32 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:534
+#: admin/inc/class-spicethemes-about-page.php:529
 msgid "To display the contact form, install & activate this plugin."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:539
+#: admin/inc/class-spicethemes-about-page.php:534
 msgid "To enable the display of breadcrumbs, please install and activate this plugin."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:544
+#: admin/inc/class-spicethemes-about-page.php:539
 msgid "To add a different banner image for a different page or post, install & activate this plugin."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:549
+#: admin/inc/class-spicethemes-about-page.php:544
 msgid "To display the posts in a beautiful slider with multiple options, install & activate this plugin."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:554
+#: admin/inc/class-spicethemes-about-page.php:549
 msgid "To add the social share buttons to your posts, install & activate this plugin."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:559
+#: admin/inc/class-spicethemes-about-page.php:554
 msgid "We highly recommend installing and activating the Seo Optimized Images plugin, which will dynamically insert SEO-friendly alt attributes and title attributes to enhance your image optimization."
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:564
+#: admin/inc/class-spicethemes-about-page.php:559
 msgid "We highly recommend installing and activating the WooCommerce plugin, which allows you to create a shop and enhance your business."
-msgstr ""
-
-#: admin/inc/class-spicethemes-about-page.php:569
-msgid "It is recommended that you install & activate the Spice Blocks plugin to import the gutenberg starter sites"
 msgstr ""
 
 #: admin/tab-pages/getting-started.php:13
@@ -213,7 +209,7 @@ msgstr ""
 msgid "Free vs Pro"
 msgstr ""
 
-#: admin/tab-pages/getting-started.php:117 functions.php:240
+#: admin/tab-pages/getting-started.php:117 functions.php:239
 msgid "Changelog"
 msgstr ""
 
@@ -558,7 +554,7 @@ msgstr ""
 msgid "Welcome Banner"
 msgstr ""
 
-#: functions.php:173 functions.php:258
+#: functions.php:173 functions.php:257
 msgid "Dismiss this notice"
 msgstr ""
 
@@ -575,56 +571,32 @@ msgstr ""
 msgid "complete with exciting new features. Take a look now!"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:234
 msgid "Try Now"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:236
 msgid "Try It Now"
 msgstr ""
 
-#: functions.php:242
+#: functions.php:241
 msgid "See Changelog"
 msgstr ""
 
-#: functions.php:245 functions.php:247
+#: functions.php:244 functions.php:246
 msgid "Watch Videos"
 msgstr ""
 
-#: functions.php:250 functions.php:252
+#: functions.php:249 functions.php:251
 msgid "Upgrade To Pro"
 msgstr ""
 
-#: functions.php:313
+#: functions.php:312
 msgid "Header Layout"
 msgstr ""
 
-#: functions.php:406
+#: functions.php:405
 msgid "Alignment"
-msgstr ""
-
-#: functions.php:469
-msgid "You do not have permission to manage plugins."
-msgstr ""
-
-#: functions.php:474
-msgid "No plugin slug provided."
-msgstr ""
-
-#: functions.php:501
-msgid "You do not have permission to install plugins."
-msgstr ""
-
-#: functions.php:507
-msgid "Security check failed."
-msgstr ""
-
-#: functions.php:512
-msgid "No plugin URL provided."
-msgstr ""
-
-#: functions.php:528
-msgid "Invalid file type."
 msgstr ""
 
 #: header.php:25
