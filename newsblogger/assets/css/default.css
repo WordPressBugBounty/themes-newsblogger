@@ -42,7 +42,7 @@ body .header-1 .spnc-custom .spnc-nav > .active > a, body .header-1 .spnc-custom
     .header-12 .spnc-custom .spnc-nav .dropdown-menu li.active > a, [data-theme="spnc_dark"] .header-12 .spnc-custom .spnc-nav .dropdown-menu li.active > a, [data-theme="spnc_dark"] body.newscrunch #wrapper .header-12.header-sidebar .spnc-custom .spnc-collapse .spnc-nav .dropdown-menu > li.active > a, [data-theme="spnc_dark"] body.newsblogger #wrapper .header-12.header-sidebar .spnc-custom .spnc-collapse .spnc-nav li.active > a, .newsblogger .header-sidebar .spnc-custom .dropdown-menu > .active > a  { color: #369ef6; }
 }
 .newsblogger .header-2 .spnc-widget-toggle>a.spnc-toggle-icon:hover { color: #fff; }
-body .header-12 .spnc-custom .spnc-nav li > a.search-icon:is(:hover, :focus) { color: #369ef6; }
+body.newsblogger .header-12 .spnc-custom .spnc-nav li > a.search-icon:is(:hover, :focus) { color: #369ef6; }
 /*===================================================================================*/
 /*  HIGHLIGHTS
 /*===================================================================================*/
