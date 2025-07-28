@@ -6,7 +6,7 @@ Author URI: https://spicethemes.com
 Description: NewsBlogger is a dynamic and versatile child theme for the popular NewCrunch WordPress theme. Perfect for bloggers, journalists, and online magazines, it offers enhanced customization options, improved performance, and seamless integration with both the Gutenberg and Classic editors. Compatible to various popular plugins such as Elementor, Contact Form 7, Polylang and WPML. Theme is RTL ready and prioritizes user privacy and complies with the General Data Protection Regulation (GDPR) guidelines by refraining from collecting any personal data restricted under GDPR. The theme is also schema-ready, enhancing search engine visibility and optimization. To explore the theme further, feel free to check out our demo at: https://demo-news.spicethemes.com/startersite-1/. For video tutorial visit here https://www.youtube.com/playlist?list=PLTfjrb24Pq_DeJOZdKEaP3rZPbHuOCLtZ
 Template: newscrunch
 Tags: blog, news, photography, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, rtl-language-support, one-column, two-columns, full-width-template, sticky-post, right-sidebar, footer-widgets, grid-layout
-Version: 0.2.5.7.4
+Version: 0.2.5.7.5
 Requires at least: 4.5
 Tested up to: 6.8
 Requires PHP: 5.6
@@ -498,3 +498,19 @@ body.newsblogger  .spnc_product-2 .products .product, .home.newsblogger  .spnc_p
 .custom-i_effect8 .widget_newscrunch_overlay_slider .spnc-post .spnc-post-overlay,
 body.newsblogger #wrapper .wp-block-latest-posts__featured-image.i_effect8,
 .widget_spncp_verticle_post_slider .spnc-post-thumbnail.i_effect8{border-radius: 10px;}
+body .spnc-video h3.spnc-entry-title a,
+body .widget_newscrunch_category_collection .spnc-categories .cat-item a,
+body .widget_newscrunch_category_collection .spnc-categories .cat-item span,
+body .widget_newscrunch_grid_slider_three_column .spnc-post-grid-slider-three-column .spnc-entry-meta .spnc-date a,
+body .widget_newscrunch_grid_slider_three_column .spnc-post-grid-slider-three-column .spnc-entry-meta a,
+body .spnc-blog-wrapper-1 .spnc-post .spnc-entry-meta .spnc-date a,
+body .widget_newscrunch_overlay_slider .spnc-blog1-carousel h4.spnc-entry-title a,
+body .widget_newscrunch_overlay_slider .spnc-blog1-carousel .spnc-post .spnc-entry-meta a,
+body .widget_newscrunch_single_column .single-column .spnc-entry-meta span,
+body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .spnc-entry-meta .spnc-cat-links a,
+body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .entry-header .spnc-entry-title a,
+body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .spnc-description,
+body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .spnc-footer-meta span,
+body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .spnc-more-link,
+body .widget_spncp_verticle_post_slider .spnc-post a,
+body .widget_spncp_verticle_post_slider .spnc-post span{font-family: "Jost";}
