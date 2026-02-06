@@ -1,9 +1,9 @@
 === NewsBlogger ===
 
 Contributors: spicethemes
-Requires at least: 4.5
-Tested up to: 6.8
-Stable tag: 0.2.5.7.5
+Requires at least: 5.4
+Tested up to: 6.9
+Stable tag: 0.2.6.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,13 +26,25 @@ Keyboard navigation is working properly in the forward direction by using the ta
 
 == Copyright ==
 
-Newscrunch WordPress Theme, Copyright (C) 2023-2025, spicethemes
+Newscrunch WordPress Theme, Copyright (C) 2023-2026, spicethemes
 Newscrunch WordPress Theme is distributed under the terms of the GNU GPL
 
-NewsBlogger WordPress Theme is a child theme of Newscrunch Theme, Copyright (C) 2025, SpiceThemes
+NewsBlogger WordPress Theme is a child theme of Newscrunch Theme, Copyright (C) 2026, SpiceThemes
 NewsBlogger WordPress Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+@Version 0.2.6.1
+* Update category setting in featured post widget to select multiple category.
+
+@Version 0.2.6
+* Security: Added capability checks, CSRF nonce verification, and URL host validation to the newsblogger_install_and_activate_plugin() AJAX handler to address CVE-2025-12821 and related issues.
+
+@Version 0.2.5.9
+* Fixed console error issue.
+
+@Version 0.2.5.8
+* Added WooCommerce header variation.
 
 @Version 0.2.5.7.5
 * Added custom video block support for featured video section in pro.
@@ -181,4 +193,4 @@ https://pxhere.com/en/photo/620084
 https://pxhere.com/en/photo/1049884#google_vignette
 
 * Images on /assets/images folder
-Copyright (C) 2025, spicethemes and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright (C) 2026, spicethemes and available as [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)

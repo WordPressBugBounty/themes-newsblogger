@@ -72,5 +72,11 @@ function newsblogger_custom_color_css() {
 		.newsblogger .sticky-post-icon, .newsblogger .spnc-post.format-quote .spnc-quote-wrap, .newsblogger .spnc-post .spnc-post-btn {
 		    background-color: <?php echo esc_attr($link_color); ?>;
 		}
+		.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a,
+    	.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a:hover,
+    	.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a:focus{
+        		color: <?php echo esc_attr($link_color); ?>;
+        		background-color: transparent;
+    	}
 	</style>
 <?php }

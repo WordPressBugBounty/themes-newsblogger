@@ -6,9 +6,9 @@ Author URI: https://spicethemes.com
 Description: NewsBlogger is a dynamic and versatile child theme for the popular NewCrunch WordPress theme. Perfect for bloggers, journalists, and online magazines, it offers enhanced customization options, improved performance, and seamless integration with both the Gutenberg and Classic editors. Compatible to various popular plugins such as Elementor, Contact Form 7, Polylang and WPML. Theme is RTL ready and prioritizes user privacy and complies with the General Data Protection Regulation (GDPR) guidelines by refraining from collecting any personal data restricted under GDPR. The theme is also schema-ready, enhancing search engine visibility and optimization. To explore the theme further, feel free to check out our demo at: https://demo-news.spicethemes.com/startersite-1/. For video tutorial visit here https://www.youtube.com/playlist?list=PLTfjrb24Pq_DeJOZdKEaP3rZPbHuOCLtZ
 Template: newscrunch
 Tags: blog, news, photography, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, rtl-language-support, one-column, two-columns, full-width-template, sticky-post, right-sidebar, footer-widgets, grid-layout
-Version: 0.2.5.7.5
-Requires at least: 4.5
-Tested up to: 6.8
+Version: 0.2.6.1
+Requires at least: 5.4
+Tested up to: 6.9
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -517,3 +517,17 @@ body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-c
 body .widget_spncp_filter_list_view .spnc-wrapper-4-item .spnc-post .spnc-post-content .spnc-more-link,
 body .widget_spncp_verticle_post_slider .spnc-post a,
 body .widget_spncp_verticle_post_slider .spnc-post span{font-family: "Jost";}
+.newsblogger .header-13.header-sidebar  .spnc-custom .spnc-navbar .spnc-container {
+  display: block;
+}
+.header-13 .spnc-custom .spnc-nav li > a,
+.shop-product-search .shop-product-cat-selected,
+.shop-product-search .shop-product-cat-search .shop-category-list ul a,
+.shop-product-search .shop-product-cat-search .shop-category-list .category-list-titl span,
+.shop-cat-menu .shop-cat-card-list a {	
+	 font-family: "Jost", sans-serif; 
+}
+.shop-cat-menu .shop-cat-menu-head .shop-cat-menu-head-title{ font-family: "Jost", sans-serif; }
+.newsblogger .header-13.header-sidebar {margin-bottom: 20px; position: relative;}
+.newsblogger .header-13 .head-contact-info i{color: #fff;}
+.newsblogger .header-13 .header-cart li a{ color: #000; }

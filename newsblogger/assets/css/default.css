@@ -225,3 +225,56 @@ body.newsblogger.woocommerce-page .woocommerce-message::before {
 .newsblogger .search-panel input[type="search"] {
     border: 1px solid #369ef6;
 }
+
+.newsblogger .shop-cat-menu .shop-cat-menu-head, .newsblogger .shop-product-search form button {background-color: #369ef6;}
+.newsblogger .shop-cat-menu .shop-cat-card-list a:is(:hover, :focus) { color: #369ef6; }
+.newsblogger .shop-product-search .shop-product-cat-search .shop-category-list ul a:is(:hover,:focus){color: #369ef6;}
+.newsblogger .shop-product-search .shop-product-cat-search .shop-category-list .category-list-titl span.shop-cat-close i {
+      background: #369ef6;
+}
+.newsblogger .header-13 .spnc-custom .spnc-nav>.active>a,
+.newsblogger .header-13 .spnc-custom .spnc-nav>.active>a:hover,
+.newsblogger .header-13 .spnc-custom .spnc-nav>.active>a:focus{
+     color: #369ef6;
+}
+.newsblogger .header-13 .spnc-custom .header-cart.spnc-nav li > a.cart-icon .cart-count{background: #369ef6;}
+.newsblogger .header-13 .spnc-custom .header-cart.spnc-nav li > a.cart-icon{color: #000;}
+.newsblogger .header-13 .spnc-custom .header-cart.spnc-nav li > a.cart-icon:hover{color: #369ef6;}
+.newsblogger .uti-btns .shop-user a:is(:hover, :focus),
+.newsblogger .uti-btns .shop-wishlist a:is(:hover, :focus),
+.newsblogger .uti-btns .shop-cart a:is(:hover, :focus) {
+  color: #369ef6;
+}
+[data-theme="spnc_dark"] .newsblogger .shop-product-search .shop-product-cat-search .shop-category-list ul a:is(:hover, :focus) {
+  color: #369ef6;
+}
+.newsblogger .header-13 .custom-social-icons li > a:hover, .newsblogger .header-13 .custom-social-icons li > a:focus{
+    background-color: #369ef6;
+    color: #ffffff;
+    border-color: #369ef6;
+}
+.newsblogger .header-13 .spnc-custom .spnc-dark-icon:hover{
+    color: #369ef6;;
+}
+@media (max-width: 1100px) {
+    .newsblogger .header-13 .spnc-custom .spnc-toggle {
+        color: #369ef6;
+    }
+    body.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a,
+    body.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a:hover,
+    body.newsblogger .header-13 .spnc-custom .spnc-nav > .active > a:focus{
+        color: #369ef6;
+        background-color: transparent;
+    }
+    [data-theme="spnc_dark"] body.newscrunch.newsblogger #wrapper .header-sidebar.header-13 .spnc-custom .spnc-collapse .spnc-nav li.active > a {
+        color: #369ef6;
+        background-color: transparent;
+    }
+}
+[data-theme="spnc_dark"] .newsblogger .header-13 .spnc-custom .header-cart.spnc-nav li > a.cart-icon:hover{
+    color: #369ef6;
+}
+.newsblogger .header-13 .spnc-custom .header-cart.spnc-nav li > a.cart-icon:is(:hover, :focus){color: #369ef6; }
+.newsblogger .shop-product-search .shop-product-cat-search .shop-category-list ul {
+      scrollbar-color: #369ef6 #fff;
+}

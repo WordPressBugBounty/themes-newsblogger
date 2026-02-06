@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function($) {
      var pluginSlug = 'spice-starter-sites'; // Adjust this based on your plugin slug
     var pluginUrl = 'https://spicethemes.com/extensions/spice-starter-sites.zip'; // The plugin URL
@@ -9,7 +10,7 @@ jQuery(document).ready(function($) {
         data: {
             action: 'newsblogger_check_plugin_status',
             plugin_slug: pluginSlug,
-            _ajax_nonce: pluginInstallerAjax.nonce
+           security_nonce: pluginInstallerAjax.nonce  // <-- send the nonce
         },
         success: function(response) {
             var $button = $('#install-plugin-button');
@@ -46,10 +47,10 @@ jQuery(document).ready(function($) {
                 url: pluginInstallerAjax.ajax_url,
                 method: 'POST',
                 data: {
-                    action: 'newsblogger_install_activate_plugin',
+                    action: 'newsblogger_install_and_activate_plugin',
                     plugin_url: pluginUrl,
                     plugin_slug: pluginSlug,
-                    _ajax_nonce: pluginInstallerAjax.nonce
+                    security_nonce: pluginInstallerAjax.nonce  // <-- send the nonce
                 },
                 success: function(response) {
                     if (response.success) {
@@ -76,16 +77,15 @@ jQuery(document).ready(function($) {
             });
         } else if ($button.text() === 'Activate Plugin') {
             $button.text('Activating...').attr('disabled', true);
-
             // Redirect after activation
             $.ajax({
                 url: pluginInstallerAjax.ajax_url,
                 method: 'POST',
                 data: {
-                    action: 'newsblogger_install_activate_plugin',
+                    action: 'newsblogger_install_and_activate_plugin',
                     plugin_url: pluginUrl,
                     plugin_slug: pluginSlug,
-                    _ajax_nonce: pluginInstallerAjax.nonce
+                    security_nonce: pluginInstallerAjax.nonce  // <-- send the nonce
                 },
                 success: function(response) {
                     if (response.success) {

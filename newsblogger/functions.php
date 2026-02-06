@@ -227,8 +227,7 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo "Added custom video block support for Featured Video Section in PRO."; ?></li>
-                            <li><?php echo "Fixed some typography issues."; ?></li>
+                            <li><?php echo "Update category setting in featured post widget to select multiple category."; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
@@ -328,6 +327,9 @@ function newsblogger_theme_header_panel_customizer( $wp_customize ) {
                 ),
                 '9'    => array(
                     'image' => get_stylesheet_directory_uri() . '/inc/customizer/assets/img/classic-center.jpg',
+                ),
+                '10'    => array(
+                    'image' => get_stylesheet_directory_uri() . '/inc/customizer/assets/img/woo-header1.jpg',
                 )
             )
         )
@@ -492,30 +494,41 @@ function newsblogger_check_plugin_status() {
 }
 
 // Existing AJAX installation function for installing and activating
-add_action('wp_ajax_newsblogger_install_activate_plugin', 'newsblogger_install_and_activate_plugin',11);
-
+add_action('wp_ajax_newsblogger_install_and_activate_plugin', 'newsblogger_install_and_activate_plugin',11);
 function newsblogger_install_and_activate_plugin() {
-    
-    // Check if user is authorized (must be an admin)
-    if (!current_user_can('install_plugins')) {
-        wp_send_json_error(esc_html__('You do not have permission to install plugins.', 'newsblogger'));
-        return;
+
+    // 1. Capability checks – only admins who can install & activate plugins.
+    if ( ! current_user_can( 'install_plugins' ) || ! current_user_can( 'activate_plugins' ) ) {
+		wp_send_json_error(esc_html__('You are not allowed to install or activate plugins.', 'newsblogger'));
     }
 
-    if (!isset($_POST['plugin_url'])) {
-         wp_send_json_error(esc_html__('No plugin URL provided.', 'newsblogger'));
-        return;
-    }
-
+    // 2. CSRF protection – AJAX nonce.
+    //   Make sure your JS/form sends a 'nonce' field created with
+    check_ajax_referer( 'newsblogger_install_plugin', 'security_nonce' );
+	
     // Include necessary WordPress files for plugin installation
     include_once(ABSPATH . 'wp-admin/includes/file.php');
     include_once(ABSPATH . 'wp-admin/includes/misc.php');
     include_once(ABSPATH . 'wp-admin/includes/class-wp-upgrader.php');
     include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
-    $plugin_url = esc_url($_POST['plugin_url']);
-    $plugin_slug = sanitize_text_field($_POST['plugin_slug']);
+	// 3. Sanitize input.
+    $plugin_url  = isset( $_POST['plugin_url'] )? esc_url_raw( wp_unslash( $_POST['plugin_url'] ) ) : '';
+	
+    //$plugin_slug = sanitize_text_field($_POST['plugin_slug']);
+	$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_key( wp_unslash( $_POST['plugin_slug'] ) ) : '';
+	
+	if ( empty( $plugin_url ) || empty( $plugin_slug ) ) {
+		wp_send_json_error(esc_html__('Missing plugin URL or slug.', 'newsblogger'));
+    }
+	// 4. Restrict allowed hosts for plugin_url to trusted ones.
+    $parsed = wp_parse_url( $plugin_url );
+
+    if ( ! $parsed || empty( $parsed['host'] ) ) {
+		wp_send_json_error(esc_html__('Invalid plugin URL.', 'newsblogger'));
+    }
     $plugin_main_file = $plugin_slug . '/' . $plugin_slug . '.php'; // Ensure this matches your plugin structure
+	
 
     WP_Filesystem();
     // Download the plugin file
@@ -540,9 +553,6 @@ function newsblogger_install_and_activate_plugin() {
 
     // Activate the plugin if it was installed
     $activate_result = activate_plugin($plugin_main_file);
-
-    
-
     // Return success with redirect URL
     if ( class_exists('Newscrunch_Plus') ){
         wp_send_json_success(array('redirect_url' => admin_url('admin.php?page=newscrunch-plus-welcome')));
@@ -550,7 +560,6 @@ function newsblogger_install_and_activate_plugin() {
         wp_send_json_success(array('redirect_url' => admin_url('admin.php?page=newsblogger-welcome')));
     }
 }
-
 // Enqueue JavaScript for the button functionality
 add_action('admin_enqueue_scripts', 'newsblogger_enqueue_plugin_installer_script',11);
 
@@ -559,6 +568,6 @@ function newsblogger_enqueue_plugin_installer_script() {
     wp_enqueue_script('newsblogger-plugin-installer-js',  NEWSBLOGGER_TEMPLATE_DIR_URI . '/admin/assets/js/plugin-installer.js', array('jquery'), null, true);
     wp_localize_script('newsblogger-plugin-installer-js', 'pluginInstallerAjax', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('plugin_installer_nonce')
+        'nonce' => wp_create_nonce('newsblogger_install_plugin')
     ));
 }
