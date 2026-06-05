@@ -227,7 +227,7 @@ if(!class_exists('Newscrunch_Plus')){
                         </p>
 
                         <ol class="admin-notice-up-list">
-                            <li><?php echo " Added category style variations."; ?></li>
+                            <li><?php echo " Fixed Post/Page Editor Style issue."; ?></li>
                         </ol>
 
                         <div class="admin-notice-up-btn-wrap">
