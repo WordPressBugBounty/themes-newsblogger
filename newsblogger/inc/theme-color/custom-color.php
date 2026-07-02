@@ -78,5 +78,14 @@ function newsblogger_custom_color_css() {
         		color: <?php echo esc_attr($link_color); ?>;
         		background-color: transparent;
     	}
+    	.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-blog-home .spnc-main-wrapper{
+		    border-bottom: 1px solid <?php echo esc_attr($link_color); ?>;
+		}
+		.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-blog-home .spnc-main-wrapper-heading{
+		    background-color: <?php echo esc_attr($link_color); ?>;
+		}
+		.newsblogger .spnc-blog-home .spnc-main-wrapper {
+		    background-color: <?php echo esc_attr($link_color); ?>;
+		}
 	</style>
 <?php }

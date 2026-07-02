@@ -278,3 +278,12 @@ body.newsblogger.woocommerce-page .woocommerce-message::before {
 .newsblogger .shop-product-search .shop-product-cat-search .shop-category-list ul {
       scrollbar-color: #369ef6 #fff;
 }
+.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-blog-home .spnc-main-wrapper{
+    border-bottom: 1px solid #369ef6;
+}
+.newsblogger .spnc-wrapper.spnc-btn-1 .spnc-blog-home .spnc-main-wrapper-heading{
+    background-color: #369ef6;
+}
+.newsblogger .spnc-blog-home .spnc-main-wrapper {
+    background-color: #369ef6;
+}
