@@ -22,7 +22,7 @@ $newsblogger_name = wp_get_theme();
 								<img src="<?php echo esc_url(NEWSBLOGGER_TEMPLATE_DIR_URI.'/admin/assets/img/import-demo-img.png');?>" alt="<?php esc_attr_e('Import Image','newsblogger'); ?>"/>
 							</a>
 						<?php else: ?>
-							<button id="install-plugin-button" data-plugin-url="<?php echo esc_url( 'https://spicethemes.com/extensions/spice-starter-sites.zip' ); ?>">
+							<button id="install-plugin-button" data-plugin-url="<?php echo esc_url( 'https://downloads.spicethemes.com/extensions/spice-starter-sites.zip' ); ?>">
                                 <?php echo esc_html__( 'Install Plugin', 'newsblogger' ); ?>
                             </button>
 							<img src="<?php echo esc_url(NEWSBLOGGER_TEMPLATE_DIR_URI.'/admin/assets/img/spice-starter-sites.png');?>" alt="<?php esc_attr_e('Import Image','newsblogger'); ?>"/>
